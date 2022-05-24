@@ -1,0 +1,25 @@
+{% include "header.html" %}
+    <h1>Your Orders</h1>
+    {% if order_list != [] %}
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </thead>
+            <tbody>
+                {% for order in order_list %}
+                <tr>
+                    <td>{{order["details"][0]["name"]}}</td>
+                    <td>{{order["details"][0]["qty"]}}</td>
+                    <td>{{order["details"][0]["subtotal"]}}</td>
+                </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    {% else %}
+    <div>No orders have been made yet.</div>
+    {% endif %}
+
+{% include "footer.html" %}

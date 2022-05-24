@@ -1,0 +1,13 @@
+{% include "header.html" %}
+        <h1>Change Password</h1>
+
+        <form action="/authchange" method="POST">
+            <table>
+               <tr><td><label for="oldpass">Old Password:</label><input type="text" name="oldpass" placeholder="Enter Old Password"></td></tr>
+               <tr><td><label for="newpass">New Password:</label><input type="text" name="newpass" placeholder="Enter New Password"></td></tr>
+               <tr><td><label for="re-enter">Re-enter New:</label><input type="text" name="re-enter" placeholder="Re-enter New Password"></td></tr>
+               <tr><td colspan="2"><input type="submit" value="Submit"/></td></tr>
+            <table>
+          </form>
+
+{% include "footer.html" %}
